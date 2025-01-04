@@ -20,7 +20,7 @@ export const OrgSidebar = () => {
                         src="/logo.svg"
                         alt="logo"
                         height={32}
-                        width={100}
+                        width={65}
                     />
                     <span className={`font-semibold text-2xl ${poppins.className}`}>
                         Board
