@@ -21,7 +21,7 @@ export const LayerRectangle = ({ id, layer, onPointerDown, selectionColor }: Lay
             y={0}
             width={width}
             height={height}
-            strokeWidth={1}
+            strokeWidth={2}
             fill={fill ? colorToCSS(fill) : "#CCC"}
             stroke={selectionColor || "transparent"}
         />
