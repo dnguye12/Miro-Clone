@@ -3,17 +3,18 @@
 import { Canvas } from "./_components/canvas"
 import { Room } from "@/components/room"
 import { Loading } from "./_components/loading"
+import { useParams } from "next/navigation"
 
-interface BoardIdPageProps {
-    params: {
-        boardId: string
+const BoardIdPage = () => {
+    const params = useParams()
+    const boardId = typeof params.boardId === "string" ? params.boardId : undefined;
+
+    if (!boardId) {
+        return null
     }
-}
-
-const BoardIdPage = ({ params }: BoardIdPageProps) => {
     return (
-        <Room roomId={params.boardId} fallback={<Loading />}>
-            <Canvas boardId={params.boardId} />
+        <Room roomId={boardId} fallback={<Loading />}>
+            <Canvas boardId={boardId} />
         </Room>
     )
 }
